@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck1bor4dkgd6a"]
+
+[ext_resource type="Texture2D" uid="uid://bbyu8qsefpj8k" path="res://UI assets pack 2/UI cooking.png" id="1_3d6lc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obwgc"]
+size = Vector2(44.5, 41)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3d6lc")
+region_enabled = true
+region_rect = Rect2(82.1426, 48.6429, 44.3667, 44.6117)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, 36)
+texture = ExtResource("1_3d6lc")
+region_enabled = true
+region_rect = Rect2(127.533, 101.315, 17.8433, 43.9711)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.25, 0)
+shape = SubResource("RectangleShape2D_obwgc")

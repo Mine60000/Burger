@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://r5um1eekuutu"]
+
+[ext_resource type="Texture2D" uid="uid://bbyu8qsefpj8k" path="res://UI assets pack 2/UI cooking.png" id="1_bdok8"]
+[ext_resource type="PackedScene" uid="uid://ck1bor4dkgd6a" path="res://Pan.tscn" id="1_d8rpa"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(28, 27)
+texture = ExtResource("1_bdok8")
+region_enabled = true
+region_rect = Rect2(274.224, 258.131, 45.1579, 44.1316)
+
+[node name="Area2D" parent="." instance=ExtResource("1_d8rpa")]
+position = Vector2(104, 43)
+
+[node name="Area2D2" parent="." instance=ExtResource("1_d8rpa")]
+position = Vector2(38, 43)

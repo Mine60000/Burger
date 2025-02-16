@@ -8,12 +8,19 @@
 [node name="Timer" type="Timer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1154.0
+light_mask = 512
+visibility_layer = 512
+offset_left = -1.0
+offset_right = 1153.0
 offset_bottom = 642.0
 color = Color(0.773738, 0.510885, 0, 1)
 
 [node name="Node2D" parent="." instance=ExtResource("1_p8vnf")]
+
 position = Vector2(94, 258)
 scale = Vector2(2, 2)
 
 [node name="Node2D2" parent="." instance=ExtResource("2_xd0ar")]
+
+
+

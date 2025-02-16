@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp8jrlgnkvud5"]
+
+[ext_resource type="PackedScene" uid="uid://bpdhabedgg5hh" path="res://IngredientNodes/ingredient.tscn" id="1_tha0d"]
+[ext_resource type="Texture2D" uid="uid://dj62aytrpt83i" path="res://Ingredient Textures/64f6.png" id="2_uaqf1"]
+
+[node name="Cheese" instance=ExtResource("1_tha0d")]
+position = Vector2(1, 1)
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(24, 21)
+scale = Vector2(4, 4)
+texture = ExtResource("2_uaqf1")
+region_enabled = true
+region_rect = Rect2(68.5274, 64.2102, 12.7452, 11.2969)
+metadata/_edit_lock_ = true
+
+[node name="Button" parent="Sprite2D" index="0"]
+offset_left = -6.0
+offset_top = -5.0
+offset_right = 6.0
+offset_bottom = 5.0
+metadata/_edit_lock_ = true

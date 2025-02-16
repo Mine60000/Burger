@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dksfn62gg4rlj"]
+[gd_scene load_steps=6 format=3 uid="uid://dksfn62gg4rlj"]
 
 [ext_resource type="PackedScene" uid="uid://r5um1eekuutu" path="res://Oven.tscn" id="1_p8vnf"]
 [ext_resource type="PackedScene" uid="uid://5mv4822ygqe6" path="res://Shop.tscn" id="2_xd0ar"]
+[ext_resource type="PackedScene" uid="uid://bbhdnm14velay" path="res://IngredientNodes/rawpatty.tscn" id="4_abm1f"]
+[ext_resource type="PackedScene" uid="uid://bxhew6d1nn3g0" path="res://IngredientNodes/tomato.tscn" id="5_c8o5v"]
+[ext_resource type="PackedScene" uid="uid://cp8jrlgnkvud5" path="res://IngredientNodes/cheese.tscn" id="5_vv56l"]
 
 [node name="Main" type="Node2D"]
 
@@ -10,17 +13,21 @@
 [node name="ColorRect" type="ColorRect" parent="."]
 light_mask = 512
 visibility_layer = 512
-offset_left = -1.0
-offset_right = 1153.0
-offset_bottom = 642.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1155.0
+offset_bottom = 643.0
 color = Color(0.773738, 0.510885, 0, 1)
 
 [node name="Node2D" parent="." instance=ExtResource("1_p8vnf")]
-
 position = Vector2(94, 258)
 scale = Vector2(2, 2)
 
 [node name="Node2D2" parent="." instance=ExtResource("2_xd0ar")]
 
+[node name="Tomato" parent="." instance=ExtResource("5_c8o5v")]
 
+[node name="IngredientInterface" parent="." instance=ExtResource("4_abm1f")]
+position = Vector2(172, 82)
 
+[node name="Cheese" parent="." instance=ExtResource("5_vv56l")]

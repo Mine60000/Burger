@@ -16,6 +16,7 @@ func _on_time_to_cook_timeout() -> void:
 	
 	$AnimatedSprite2D.hide()
 	$AnimatedSprite2D2.hide()
+	$AudioStreamPlayer2D.stop()
 
 
 func _on_body_entered(body: Node2D) -> void:

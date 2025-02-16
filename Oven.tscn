@@ -6,13 +6,61 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(28, 27)
+position = Vector2(15, 132.5)
 texture = ExtResource("1_bdok8")
 region_enabled = true
-region_rect = Rect2(274.224, 258.131, 45.1579, 44.1316)
+region_rect = Rect2(433.146, 272.621, 21.45, 46.7597)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(132, 132.5)
+texture = ExtResource("1_bdok8")
+region_enabled = true
+region_rect = Rect2(457.621, 272.621, 21.33, 46.76)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(74.5, 132.5)
+scale = Vector2(6.3125, 1)
+texture = ExtResource("1_bdok8")
+region_enabled = true
+region_rect = Rect2(448.732, 272.573, 16.3222, 46.7946)
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(73, 116.5)
+scale = Vector2(0.945, 0.945)
+texture = ExtResource("1_bdok8")
+region_enabled = true
+region_rect = Rect2(432.791, 320.719, 45.606, 15.072)
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(73.5, 103.25)
+scale = Vector2(3.86111, 0.5)
+texture = ExtResource("1_bdok8")
+region_enabled = true
+region_rect = Rect2(341.738, 281.173, 36.3574, 27.6254)
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(8, 68)
+scale = Vector2(1, 1.5)
+texture = ExtResource("1_bdok8")
+region_enabled = true
+region_rect = Rect2(341.542, 242.079, 6.72675, 38.6149)
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(140, 67.5)
+scale = Vector2(1, 1.5)
+texture = ExtResource("1_bdok8")
+region_enabled = true
+region_rect = Rect2(372.187, 242.079, 6.727, 38.615)
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(74.5, 67.5)
+scale = Vector2(18.8333, 1.5)
+texture = ExtResource("1_bdok8")
+region_enabled = true
+region_rect = Rect2(360.387, 242.079, 6.727, 38.615)
 
 [node name="Area2D" parent="." instance=ExtResource("1_d8rpa")]
-position = Vector2(104, 43)
+position = Vector2(109, 67)
 
 [node name="Area2D2" parent="." instance=ExtResource("1_d8rpa")]
-position = Vector2(38, 43)
+position = Vector2(39, 66)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bpdhabedgg5hh"]
 
-[ext_resource type="Script" path="res://ingredient.gd" id="1_abj4s"]
+[ext_resource type="Script" path="res://IngredientNodes/ingredient.gd" id="1_abj4s"]
 [ext_resource type="Texture2D" uid="uid://bm5dtonhjpu3t" path="res://icon.svg" id="2_7k0bk"]
 [ext_resource type="Script" path="res://sprite_2d.gd" id="3_im5rn"]
 

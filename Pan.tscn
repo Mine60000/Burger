@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://ck1bor4dkgd6a"]
+[gd_scene load_steps=4 format=3 uid="uid://ck1bor4dkgd6a"]
 
 [ext_resource type="Texture2D" uid="uid://bbyu8qsefpj8k" path="res://UI assets pack 2/UI cooking.png" id="1_3d6lc"]
+[ext_resource type="Script" path="res://pan.gd" id="1_gnpru"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_obwgc"]
 size = Vector2(44.5, 41)
 
 [node name="Area2D" type="Area2D"]
+script = ExtResource("1_gnpru")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_3d6lc")
@@ -21,3 +23,8 @@ region_rect = Rect2(127.533, 101.315, 17.8433, 43.9711)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.25, 0)
 shape = SubResource("RectangleShape2D_obwgc")
+
+[node name="Time to Cook" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Time to Cook" to="." method="_on_time_to_cook_timeout"]

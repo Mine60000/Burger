@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnhqm8ob5vajk"
+path="res://.godot/imported/sizzle.wav-1af8eb83281fa079ba43e6b9b51892f5.sample"
+
+[deps]
+
+source_file="res://UI assets pack 2/sizzle.wav"
+dest_files=["res://.godot/imported/sizzle.wav-1af8eb83281fa079ba43e6b9b51892f5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

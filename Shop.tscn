@@ -8,12 +8,13 @@
 script = ExtResource("1_kmxn7")
 
 [node name="openShopButton" type="Button" parent="."]
-offset_left = 1121.0
-offset_top = 541.0
-offset_right = 1168.0
-offset_bottom = 572.0
+offset_left = 1087.0
+offset_top = 604.0
+offset_right = 1197.0
+offset_bottom = 669.0
 rotation = -1.5708
 theme_override_fonts/font = ExtResource("1_52k6k")
+theme_override_font_sizes/font_size = 38
 text = "shop"
 
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
@@ -24,5 +25,14 @@ scale = Vector2(8.53191, 8.68889)
 texture = ExtResource("3_5kiox")
 region_enabled = true
 region_rect = Rect2(17.0953, 176.937, 47.4761, 45.8829)
+
+[node name="Label" type="Label" parent="CanvasGroup"]
+offset_left = 803.0
+offset_top = 210.0
+offset_right = 851.0
+offset_bottom = 233.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_52k6k")
+text = "Patty"
 
 [connection signal="pressed" from="openShopButton" to="." method="_on_open_shop_button_pressed"]

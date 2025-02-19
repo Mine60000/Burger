@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkbbi3g070xt6"]
+
+[ext_resource type="PackedScene" uid="uid://bpdhabedgg5hh" path="res://IngredientNodes/ingredient.tscn" id="1_m4t3h"]
+
+[node name="IngredientInterface" instance=ExtResource("1_m4t3h")]
+position = Vector2(1, 1)
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(64, 64)
+
+[node name="Button" parent="Sprite2D" index="0"]
+offset_left = -61.0
+offset_top = -62.0
+offset_right = -46.5
+offset_bottom = -50.5

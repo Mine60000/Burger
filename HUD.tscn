@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://5mv4822ygqe6"]
+[gd_scene load_steps=5 format=3 uid="uid://5mv4822ygqe6"]
 
 [ext_resource type="FontFile" uid="uid://lcobln3eqemh" path="res://UI Assets pack_v.1_st/Sta.Toasty_font (1).ttf" id="1_52k6k"]
 [ext_resource type="Script" path="res://HUD.gd" id="1_kmxn7"]
 [ext_resource type="Texture2D" uid="uid://cqdyjiw1fr4nt" path="res://UI assets pack 2/UI books & more.png" id="3_5kiox"]
+[ext_resource type="Texture2D" uid="uid://du46fjd76vlqt" path="res://Ingredient Textures/pixil-frame-0.png" id="4_wosh8"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_kmxn7")
@@ -26,13 +27,29 @@ texture = ExtResource("3_5kiox")
 region_enabled = true
 region_rect = Rect2(17.0953, 176.937, 47.4761, 45.8829)
 
-[node name="Label" type="Label" parent="CanvasGroup"]
-offset_left = 803.0
-offset_top = 210.0
-offset_right = 851.0
-offset_bottom = 233.0
+[node name="Sprite2D" type="Sprite2D" parent="CanvasGroup/Sprite2D"]
+position = Vector2(-14.7095, -13.523)
+scale = Vector2(0.422212, 0.414584)
+texture = ExtResource("4_wosh8")
+region_enabled = true
+region_rect = Rect2(24.0624, 43.3387, 19.5866, 11.475)
+
+[node name="Patty" type="Label" parent="CanvasGroup"]
+offset_left = 804.0
+offset_top = 183.0
+offset_right = 852.0
+offset_bottom = 206.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_52k6k")
 text = "Patty"
 
+[node name="Patty_button" type="Button" parent="CanvasGroup/Patty"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 18.0
+offset_right = 40.0
+offset_bottom = 49.0
+text = "Buy"
+
 [connection signal="pressed" from="openShopButton" to="." method="_on_open_shop_button_pressed"]
+[connection signal="pressed" from="CanvasGroup/Patty/Patty_button" to="." method="_on_button_pressed"]

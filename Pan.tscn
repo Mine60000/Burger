@@ -52,17 +52,18 @@ shape = SubResource("RectangleShape2D_obwgc")
 position = Vector2(-7, -37)
 scale = Vector2(2.2, 2.7)
 sprite_frames = SubResource("SpriteFrames_dpac6")
-frame_progress = 0.738465
+frame_progress = 0.493197
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 position = Vector2(16, -37)
 scale = Vector2(2.2, 2.7)
 sprite_frames = SubResource("SpriteFrames_dpac6")
-frame_progress = 0.770236
+frame_progress = 0.524968
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamWAV_fh7ql")
 autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="timeout" from="Time to Cook" to="." method="_on_time_to_cook_timeout"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://5mv4822ygqe6"]
 
 [ext_resource type="FontFile" uid="uid://lcobln3eqemh" path="res://UI Assets pack_v.1_st/Sta.Toasty_font (1).ttf" id="1_52k6k"]
-[ext_resource type="Script" path="res://shop.gd" id="1_kmxn7"]
+[ext_resource type="Script" path="res://HUD.gd" id="1_kmxn7"]
 [ext_resource type="Texture2D" uid="uid://cqdyjiw1fr4nt" path="res://UI assets pack 2/UI books & more.png" id="3_5kiox"]
 
 [node name="Node2D" type="Node2D"]

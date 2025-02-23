@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0lby2255v3lr"]
+[gd_scene load_steps=4 format=3 uid="uid://cyhaofg5mrduh"]
 
 [ext_resource type="PackedScene" uid="uid://bpdhabedgg5hh" path="res://IngredientNodes/ingredient.tscn" id="1_2541p"]
 [ext_resource type="Texture2D" uid="uid://c5py83jwu6wgx" path="res://Ingredient Textures/cookedpatty.png" id="2_c7ux4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sdke0"]
+size = Vector2(13, 8)
 
 [node name="Cooked Patty" instance=ExtResource("1_2541p")]
 position = Vector2(1, 1)
@@ -20,3 +23,7 @@ offset_top = -5.0
 offset_right = 8.0
 offset_bottom = 4.0
 metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(5.5, 3)
+shape = SubResource("RectangleShape2D_sdke0")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dksfn62gg4rlj"]
+[gd_scene load_steps=14 format=3 uid="uid://dksfn62gg4rlj"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1vjox"]
 [ext_resource type="PackedScene" uid="uid://r5um1eekuutu" path="res://Oven.tscn" id="1_p8vnf"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://bxhew6d1nn3g0" path="res://IngredientNodes/tomato.tscn" id="7_5mvqu"]
 [ext_resource type="PackedScene" path="res://IngredientNodes/cooked_patty.tscn" id="8_7117v"]
 [ext_resource type="FontFile" uid="uid://lcobln3eqemh" path="res://UI Assets pack_v.1_st/Sta.Toasty_font (1).ttf" id="10_u2eqo"]
+[ext_resource type="PackedScene" uid="uid://7w8rpbnkxst8" path="res://board.tscn" id="12_eff8j"]
+[ext_resource type="Script" path="res://board.gd" id="13_2cwd4"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_1vjox")
@@ -56,8 +58,21 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_u2eqo")
 text = "value"
 
+[node name="Board" parent="." instance=ExtResource("12_eff8j")]
+position = Vector2(566, 252)
+script = ExtResource("13_2cwd4")
+
+[node name="SellButton" type="Button" parent="."]
+offset_left = 638.0
+offset_top = 257.0
+offset_right = 673.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("10_u2eqo")
+text = "Sell"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="cookedLeft" from="Oven" to="." method="_on_oven_cooked_left"]
 [connection signal="cookedright" from="Oven" to="." method="_on_oven_cookedright"]
 [connection signal="purchase" from="HUD" to="." method="purchase"]
 [connection signal="shop_opened" from="HUD" to="." method="_on_hud_shop_opened"]
+[connection signal="pressed" from="SellButton" to="." method="_on_sell_button_pressed"]

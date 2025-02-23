@@ -94,3 +94,7 @@ func _on_oven_cookedright() -> void:
 	var patty = cookedpatty.instantiate()
 	patty.position = Vector2(308.0, 385.0)
 	add_child(patty)
+
+
+func _on_sell_button_pressed() -> void:
+	$Board.sell()

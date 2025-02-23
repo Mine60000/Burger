@@ -1,15 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://dksfn62gg4rlj"]
+[gd_scene load_steps=6 format=3 uid="uid://dksfn62gg4rlj"]
 
+[ext_resource type="Script" path="res://main.gd" id="1_1vjox"]
 [ext_resource type="PackedScene" uid="uid://r5um1eekuutu" path="res://Oven.tscn" id="1_p8vnf"]
+[ext_resource type="PackedScene" uid="uid://bbhdnm14velay" path="res://IngredientNodes/rawpatty.tscn" id="2_rlr5y"]
+[ext_resource type="PackedScene" uid="uid://5mv4822ygqe6" path="res://HUD.tscn" id="2_xd0ar"]
+[ext_resource type="PackedScene" uid="uid://bbylh8ynp5f2t" path="res://IngredientNodes/bun.tscn" id="3_f7sgg"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_1vjox")
+rawpatty = ExtResource("2_rlr5y")
+bun = ExtResource("3_f7sgg")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1154.0
 offset_bottom = 642.0
-color = Color(0.773738, 0.510885, 0, 1)
+color = Color(0.870588, 0.623529, 0.278431, 1)
 
-[node name="Node2D" parent="." instance=ExtResource("1_p8vnf")]
-position = Vector2(65, 360)
+[node name="Oven" parent="." instance=ExtResource("1_p8vnf")]
+position = Vector2(94, 258)
+scale = Vector2(2, 2)
+
+[node name="HUD" parent="." instance=ExtResource("2_xd0ar")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="purchase" from="HUD" to="." method="purchase"]
+[connection signal="shop_opened" from="HUD" to="." method="_on_hud_shop_opened"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbylh8ynp5f2t"]
+
+[ext_resource type="PackedScene" uid="uid://bpdhabedgg5hh" path="res://IngredientNodes/ingredient.tscn" id="1_u7a86"]
+[ext_resource type="Texture2D" uid="uid://dj62aytrpt83i" path="res://Ingredient Textures/64f6.png" id="2_kyr3p"]
+
+[node name="Bun" instance=ExtResource("1_u7a86")]
+position = Vector2(1, 1)
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(31, 28)
+scale = Vector2(4, 4)
+texture = ExtResource("2_kyr3p")
+region_enabled = true
+region_rect = Rect2(19.2166, 63.1468, 15.0625, 14.7729)
+metadata/_edit_lock_ = true
+
+[node name="Button" parent="Sprite2D" index="0"]
+anchors_preset = -1
+anchor_left = -0.566
+anchor_top = -0.657
+anchor_right = -0.566
+anchor_bottom = -0.657
+offset_left = 1.49
+offset_top = 2.198
+offset_right = 16.49
+offset_bottom = 16.198
+metadata/_edit_lock_ = true

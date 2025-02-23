@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpdhabedgg5hh"]
+
+[ext_resource type="Script" path="res://IngredientNodes/ingredient.gd" id="1_abj4s"]
+[ext_resource type="Texture2D" uid="uid://bm5dtonhjpu3t" path="res://icon.svg" id="2_7k0bk"]
+[ext_resource type="Script" path="res://sprite_2d.gd" id="3_im5rn"]
+
+[node name="IngredientInterface" type="Node2D"]
+position = Vector2(199, 128)
+script = ExtResource("1_abj4s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(63, 64)
+texture = ExtResource("2_7k0bk")
+script = ExtResource("3_im5rn")
+
+[node name="Button" type="Button" parent="Sprite2D"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -62.0
+offset_top = -63.0
+offset_right = 61.0
+offset_bottom = 64.0
+
+[connection signal="button_down" from="Sprite2D/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Sprite2D/Button" to="." method="_on_button_button_up"]

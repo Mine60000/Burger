@@ -1,6 +1,12 @@
 extends Node2D
 
 @export var rawpatty: PackedScene
+@export var bun: PackedScene
+@export var onion: PackedScene
+@export var letuce: PackedScene
+@export var cheese: PackedScene
+@export var tomato: PackedScene
+@export var cookedpatty: PackedScene
 var money
 var patty_price
 var bun_price
@@ -20,15 +26,20 @@ func purchase() -> void:
 		var patty = rawpatty.instantiate()
 		patty.position = Vector2(randf_range(150.0, 250.0), 100.0)
 		add_child(patty)
+		money = money - patty_price
 	if ($HUD.purchasedItem == "bun"):
-		var bun = rawpatty.instantiate()
+		var bun = bun.instantiate()
 		bun.position = Vector2(randf_range(150.0, 250.0), 100.0)
 		add_child(bun)
+		money = money - bun_price
+	change_money()
 
 func change_prices() -> void:
 	patty_price = randi_range(1,6)
 	bun_price = randi_range(1,6)
 
+func change_money() -> void:
+	pass
 
 func _on_timer_timeout() -> void:
 	change_prices()

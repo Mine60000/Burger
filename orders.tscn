@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfwg58ipkk1rp"]
+
+[ext_resource type="Script" path="res://orders.gd" id="1_vpx15"]
+[ext_resource type="Script" path="res://paper.gd" id="2_vqhcv"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u3q5e"]
+load_path = "res://.godot/imported/OrderPaper.png-b6bb8ab0c8267f2fd1acc673dd76081d.ctex"
+
+[node name="Orders" type="Node2D"]
+position = Vector2(13, 14)
+script = ExtResource("1_vpx15")
+
+[node name="paper" type="Sprite2D" parent="."]
+position = Vector2(117, 103)
+scale = Vector2(0.550633, 0.512422)
+texture = SubResource("CompressedTexture2D_u3q5e")
+script = ExtResource("2_vqhcv")
+
+[node name="OrderName" type="Label" parent="paper"]
+offset_left = -116.0
+offset_top = -164.0
+offset_right = 118.0
+offset_bottom = -43.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="paper"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -119.862
+offset_top = -160.024
+offset_right = 118.138
+offset_bottom = 161.976
+metadata/_edit_group_ = true
+
+[node name="ingredientsList" type="Label" parent="paper"]
+offset_left = -116.0
+offset_top = -111.0
+offset_right = 37.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+
+[connection signal="button_down" from="paper/Button" to="paper" method="_on_button_button_down"]
+[connection signal="button_up" from="paper/Button" to="paper" method="_on_button_button_up"]

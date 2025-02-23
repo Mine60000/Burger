@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://5mv4822ygqe6"]
+[gd_scene load_steps=7 format=3 uid="uid://5mv4822ygqe6"]
 
 [ext_resource type="FontFile" uid="uid://lcobln3eqemh" path="res://UI Assets pack_v.1_st/Sta.Toasty_font (1).ttf" id="1_52k6k"]
 [ext_resource type="Script" path="res://HUD.gd" id="1_kmxn7"]
 [ext_resource type="Texture2D" uid="uid://cqdyjiw1fr4nt" path="res://UI assets pack 2/UI books & more.png" id="3_5kiox"]
 [ext_resource type="Texture2D" uid="uid://du46fjd76vlqt" path="res://Ingredient Textures/pixil-frame-0.png" id="4_wosh8"]
 [ext_resource type="Texture2D" uid="uid://dj62aytrpt83i" path="res://Ingredient Textures/64f6.png" id="5_m4aqk"]
+[ext_resource type="Texture2D" uid="uid://crvss2ylscnml" path="res://Ingredient Textures/Fruits And Veggies 2.png" id="6_563n5"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_kmxn7")
@@ -42,6 +43,34 @@ texture = ExtResource("5_m4aqk")
 region_enabled = true
 region_rect = Rect2(19.217, 63.147, 15.063, 14.773)
 
+[node name="Cheese_sprite" type="Sprite2D" parent="CanvasGroup/Sprite2D"]
+position = Vector2(-12.2222, -4.40608)
+scale = Vector2(0.422212, 0.414584)
+texture = ExtResource("5_m4aqk")
+region_enabled = true
+region_rect = Rect2(68.527, 64.21, 12.745, 11.297)
+
+[node name="Lettuce_sprite" type="Sprite2D" parent="CanvasGroup/Sprite2D"]
+position = Vector2(0.553423, -4.75136)
+scale = Vector2(0.445519, 0.414584)
+texture = ExtResource("6_563n5")
+region_enabled = true
+region_rect = Rect2(19.749, 38.606, 14.747, 12.903)
+
+[node name="Onion_sprite" type="Sprite2D" parent="CanvasGroup/Sprite2D"]
+position = Vector2(-11.9877, 8.48394)
+scale = Vector2(0.422212, 0.414584)
+texture = ExtResource("6_563n5")
+region_enabled = true
+region_rect = Rect2(71.151, 52.581, 12.209, 12.927)
+
+[node name="Tomato_sprite" type="Sprite2D" parent="CanvasGroup/Sprite2D"]
+position = Vector2(0.787838, 8.13866)
+scale = Vector2(0.445519, 0.414584)
+texture = ExtResource("6_563n5")
+region_enabled = true
+region_rect = Rect2(37.937, 71.348, 11.356, 12.118)
+
 [node name="Patty" type="Label" parent="CanvasGroup"]
 offset_left = 827.222
 offset_top = 147.216
@@ -59,7 +88,7 @@ offset_right = 40.0
 offset_bottom = 49.0
 text = "Buy"
 
-[node name="bun" type="Label" parent="CanvasGroup"]
+[node name="Bun" type="Label" parent="CanvasGroup"]
 offset_left = 940.222
 offset_top = 148.216
 offset_right = 988.222
@@ -68,7 +97,75 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_52k6k")
 text = "Bun"
 
-[node name="bun_button" type="Button" parent="CanvasGroup/bun"]
+[node name="Bun_button" type="Button" parent="CanvasGroup/Bun"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 18.0
+offset_right = 40.0
+offset_bottom = 49.0
+text = "Buy"
+
+[node name="Cheese" type="Label" parent="CanvasGroup"]
+offset_left = 825.222
+offset_top = 262.216
+offset_right = 873.222
+offset_bottom = 285.216
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_52k6k")
+text = "Cheese"
+
+[node name="Cheese_button" type="Button" parent="CanvasGroup/Cheese"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 18.0
+offset_right = 40.0
+offset_bottom = 49.0
+text = "Buy"
+
+[node name="Lettuce" type="Label" parent="CanvasGroup"]
+offset_left = 938.222
+offset_top = 263.216
+offset_right = 986.222
+offset_bottom = 286.216
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_52k6k")
+text = "Lettuce"
+
+[node name="Lettuce_button" type="Button" parent="CanvasGroup/Lettuce"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 18.0
+offset_right = 40.0
+offset_bottom = 49.0
+text = "Buy"
+
+[node name="Onion" type="Label" parent="CanvasGroup"]
+offset_left = 827.222
+offset_top = 374.216
+offset_right = 875.222
+offset_bottom = 397.216
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_52k6k")
+text = "Onion"
+
+[node name="Onion_button" type="Button" parent="CanvasGroup/Onion"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 18.0
+offset_right = 40.0
+offset_bottom = 49.0
+text = "Buy"
+
+[node name="Tomato" type="Label" parent="CanvasGroup"]
+offset_left = 940.222
+offset_top = 375.216
+offset_right = 988.222
+offset_bottom = 398.216
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_52k6k")
+text = "Tomato"
+
+[node name="Tomato_button" type="Button" parent="CanvasGroup/Tomato"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 18.0
@@ -78,4 +175,8 @@ text = "Buy"
 
 [connection signal="pressed" from="openShopButton" to="." method="_on_open_shop_button_pressed"]
 [connection signal="pressed" from="CanvasGroup/Patty/Patty_button" to="." method="_on_patty_button_pressed"]
-[connection signal="pressed" from="CanvasGroup/bun/bun_button" to="." method="_on_bun_button_pressed"]
+[connection signal="pressed" from="CanvasGroup/Bun/Bun_button" to="." method="_on_bun_button_pressed"]
+[connection signal="pressed" from="CanvasGroup/Cheese/Cheese_button" to="." method="_on_cheese_button_pressed"]
+[connection signal="pressed" from="CanvasGroup/Lettuce/Lettuce_button" to="." method="_on_lettuce_button_pressed"]
+[connection signal="pressed" from="CanvasGroup/Onion/Onion_button" to="." method="_on_onion_button_pressed"]
+[connection signal="pressed" from="CanvasGroup/Tomato/Tomato_button" to="." method="_on_tomato_button_pressed"]

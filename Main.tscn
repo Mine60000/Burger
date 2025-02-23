@@ -1,15 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://dksfn62gg4rlj"]
+[gd_scene load_steps=11 format=3 uid="uid://dksfn62gg4rlj"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1vjox"]
 [ext_resource type="PackedScene" uid="uid://r5um1eekuutu" path="res://Oven.tscn" id="1_p8vnf"]
 [ext_resource type="PackedScene" uid="uid://bbhdnm14velay" path="res://IngredientNodes/rawpatty.tscn" id="2_rlr5y"]
 [ext_resource type="PackedScene" uid="uid://5mv4822ygqe6" path="res://HUD.tscn" id="2_xd0ar"]
 [ext_resource type="PackedScene" uid="uid://bbylh8ynp5f2t" path="res://IngredientNodes/bun.tscn" id="3_f7sgg"]
+[ext_resource type="PackedScene" uid="uid://ckpfmi3y8vpvg" path="res://IngredientNodes/onion.tscn" id="4_27siw"]
+[ext_resource type="PackedScene" uid="uid://b53l20jnejsnr" path="res://IngredientNodes/lettuce.tscn" id="5_mhq7q"]
+[ext_resource type="PackedScene" uid="uid://cp8jrlgnkvud5" path="res://IngredientNodes/cheese.tscn" id="6_na5c6"]
+[ext_resource type="PackedScene" uid="uid://bxhew6d1nn3g0" path="res://IngredientNodes/tomato.tscn" id="7_5mvqu"]
+[ext_resource type="FontFile" uid="uid://lcobln3eqemh" path="res://UI Assets pack_v.1_st/Sta.Toasty_font (1).ttf" id="10_u2eqo"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_1vjox")
 rawpatty = ExtResource("2_rlr5y")
 bun = ExtResource("3_f7sgg")
+onion = ExtResource("4_27siw")
+lettuce = ExtResource("5_mhq7q")
+cheese = ExtResource("6_na5c6")
+tomato = ExtResource("7_5mvqu")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
@@ -25,6 +34,25 @@ position = Vector2(94, 258)
 scale = Vector2(2, 2)
 
 [node name="HUD" parent="." instance=ExtResource("2_xd0ar")]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 22.0
+offset_right = 64.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_u2eqo")
+text = "Money: "
+
+[node name="value" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 1.0
+offset_right = 116.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_u2eqo")
+text = "value"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="purchase" from="HUD" to="." method="purchase"]

@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cp8jrlgnkvud5"]
+[gd_scene load_steps=4 format=3 uid="uid://cp8jrlgnkvud5"]
 
 [ext_resource type="PackedScene" uid="uid://bpdhabedgg5hh" path="res://IngredientNodes/ingredient.tscn" id="1_tha0d"]
 [ext_resource type="Texture2D" uid="uid://dj62aytrpt83i" path="res://Ingredient Textures/64f6.png" id="2_uaqf1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wb1v"]
+size = Vector2(48, 44)
 
 [node name="Cheese" instance=ExtResource("1_tha0d")]
 position = Vector2(1, 1)
@@ -20,3 +23,7 @@ offset_top = -5.0
 offset_right = 6.0
 offset_bottom = 5.0
 metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(25, 21)
+shape = SubResource("RectangleShape2D_3wb1v")

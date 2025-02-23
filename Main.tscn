@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dksfn62gg4rlj"]
+[gd_scene load_steps=12 format=3 uid="uid://dksfn62gg4rlj"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_1vjox"]
 [ext_resource type="PackedScene" uid="uid://r5um1eekuutu" path="res://Oven.tscn" id="1_p8vnf"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b53l20jnejsnr" path="res://IngredientNodes/lettuce.tscn" id="5_mhq7q"]
 [ext_resource type="PackedScene" uid="uid://cp8jrlgnkvud5" path="res://IngredientNodes/cheese.tscn" id="6_na5c6"]
 [ext_resource type="PackedScene" uid="uid://bxhew6d1nn3g0" path="res://IngredientNodes/tomato.tscn" id="7_5mvqu"]
+[ext_resource type="PackedScene" path="res://IngredientNodes/cooked_patty.tscn" id="8_7117v"]
 [ext_resource type="FontFile" uid="uid://lcobln3eqemh" path="res://UI Assets pack_v.1_st/Sta.Toasty_font (1).ttf" id="10_u2eqo"]
 
 [node name="Main" type="Node2D"]
@@ -19,6 +20,7 @@ onion = ExtResource("4_27siw")
 lettuce = ExtResource("5_mhq7q")
 cheese = ExtResource("6_na5c6")
 tomato = ExtResource("7_5mvqu")
+cookedpatty = ExtResource("8_7117v")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0

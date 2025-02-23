@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbylh8ynp5f2t"]
+[gd_scene load_steps=4 format=3 uid="uid://bbylh8ynp5f2t"]
 
 [ext_resource type="PackedScene" uid="uid://bpdhabedgg5hh" path="res://IngredientNodes/ingredient.tscn" id="1_u7a86"]
 [ext_resource type="Texture2D" uid="uid://dj62aytrpt83i" path="res://Ingredient Textures/64f6.png" id="2_kyr3p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7oikj"]
+size = Vector2(59, 56)
 
 [node name="Bun" instance=ExtResource("1_u7a86")]
 position = Vector2(1, 1)
@@ -25,3 +28,7 @@ offset_top = 2.198
 offset_right = 16.49
 offset_bottom = 16.198
 metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(30.5, 28)
+shape = SubResource("RectangleShape2D_7oikj")

@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://ck1bor4dkgd6a"]
+[gd_scene load_steps=10 format=4 uid="uid://ck1bor4dkgd6a"]
 
 [ext_resource type="Texture2D" uid="uid://bbyu8qsefpj8k" path="res://UI assets pack 2/UI cooking.png" id="1_3d6lc"]
 [ext_resource type="Script" path="res://pan.gd" id="1_gnpru"]
+[ext_resource type="PackedScene" uid="uid://bbhdnm14velay" path="res://IngredientNodes/rawpatty.tscn" id="2_870ok"]
 [ext_resource type="Texture2D" uid="uid://du64jcueiylal" path="res://UI assets pack 2/pixil-frame-0 (1).png" id="3_0b6bb"]
+[ext_resource type="Texture2D" uid="uid://du46fjd76vlqt" path="res://Ingredient Textures/pixil-frame-0.png" id="6_gephr"]
 [ext_resource type="Texture2D" uid="uid://dlaytj222x7df" path="res://UI assets pack 2/pixil-frame-0 (3).png" id="6_pftgq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_obwgc"]
@@ -29,7 +31,11 @@ loop_mode = 1
 loop_end = 110000
 
 [node name="Area2D" type="Area2D"]
+collision_layer = 512
+collision_mask = 512
+monitorable = false
 script = ExtResource("1_gnpru")
+patty = ExtResource("2_870ok")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_3d6lc")
@@ -47,6 +53,8 @@ position = Vector2(-0.25, 0)
 shape = SubResource("RectangleShape2D_obwgc")
 
 [node name="Time to Cook" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-7, -37)
@@ -65,6 +73,13 @@ stream = SubResource("AudioStreamWAV_fh7ql")
 volume_db = -17.947
 autoplay = true
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="Patty_sprite" type="Sprite2D" parent="."]
+position = Vector2(65, -35)
+texture = ExtResource("6_gephr")
+offset = Vector2(-65, 35)
+region_enabled = true
+region_rect = Rect2(24.0624, 43.3387, 19.5866, 11.475)
+
+[connection signal="area_entered" from="." to="." method="_on_body_entered"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="timeout" from="Time to Cook" to="." method="_on_time_to_cook_timeout"]

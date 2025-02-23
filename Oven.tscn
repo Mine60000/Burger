@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://r5um1eekuutu"]
+[gd_scene load_steps=4 format=3 uid="uid://r5um1eekuutu"]
 
 [ext_resource type="Texture2D" uid="uid://bbyu8qsefpj8k" path="res://UI assets pack 2/UI cooking.png" id="1_bdok8"]
 [ext_resource type="PackedScene" uid="uid://ck1bor4dkgd6a" path="res://Pan.tscn" id="1_d8rpa"]
+[ext_resource type="Script" path="res://oven.gd" id="1_vutys"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Oven" type="Node2D"]
+script = ExtResource("1_vutys")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(15, 132.5)
@@ -64,3 +66,6 @@ position = Vector2(109, 67)
 
 [node name="Area2D2" parent="." instance=ExtResource("1_d8rpa")]
 position = Vector2(39, 66)
+
+[connection signal="cooked" from="Area2D" to="." method="_on_area_2d_cooked"]
+[connection signal="cooked" from="Area2D2" to="." method="_on_area_2d_2_cooked"]

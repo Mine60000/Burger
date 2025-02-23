@@ -82,3 +82,15 @@ func _on_hud_shop_opened() -> void:
 	$HUD.lettuce_price = lettuce_price
 	$HUD.onion_price = onion_price
 	$HUD.tomato_price = tomato_price
+
+
+func _on_oven_cooked_left() -> void:
+	var patty = cookedpatty.instantiate()
+	patty.position = Vector2(165.0, 385.0)
+	add_child(patty)
+
+
+func _on_oven_cookedright() -> void:
+	var patty = cookedpatty.instantiate()
+	patty.position = Vector2(308.0, 385.0)
+	add_child(patty)

@@ -38,9 +38,9 @@ scale = Vector2(2, 2)
 [node name="HUD" parent="." instance=ExtResource("2_xd0ar")]
 
 [node name="Label" type="Label" parent="."]
-offset_left = 16.0
+offset_left = 23.0
 offset_top = 22.0
-offset_right = 64.0
+offset_right = 84.0
 offset_bottom = 45.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_u2eqo")
@@ -57,5 +57,7 @@ theme_override_fonts/font = ExtResource("10_u2eqo")
 text = "value"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="cookedLeft" from="Oven" to="." method="_on_oven_cooked_left"]
+[connection signal="cookedright" from="Oven" to="." method="_on_oven_cookedright"]
 [connection signal="purchase" from="HUD" to="." method="purchase"]
 [connection signal="shop_opened" from="HUD" to="." method="_on_hud_shop_opened"]

@@ -179,4 +179,4 @@ text = "Buy"
 [connection signal="pressed" from="CanvasGroup/Cheese/Cheese_button" to="." method="_on_cheese_button_pressed"]
 [connection signal="pressed" from="CanvasGroup/Lettuce/Lettuce_button" to="." method="_on_lettuce_button_pressed"]
 [connection signal="pressed" from="CanvasGroup/Onion/Onion_button" to="." method="_on_onion_button_pressed"]
-[connection signal="pressed" from="CanvasGroup/Tomato/Tomato_button" to="." method="_on_tomato_button_pressed"]
+[connection signal="pressed" from="CanvasGroup/Tomato/Tomato_button" to="." method="_on_bun_button_pressed"]

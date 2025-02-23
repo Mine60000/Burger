@@ -22,5 +22,6 @@ scale = Vector2(2, 2)
 
 [node name="HUD" parent="." instance=ExtResource("2_xd0ar")]
 
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="purchase" from="HUD" to="." method="purchase"]
-[connection signal="shop_opened" from="HUD" to="." method="change_prices"]
+[connection signal="shop_opened" from="HUD" to="." method="_on_hud_shop_opened"]

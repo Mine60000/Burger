@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxhew6d1nn3g0"]
+[gd_scene load_steps=5 format=3 uid="uid://bxhew6d1nn3g0"]
 
 [ext_resource type="Script" path="res://IngredientNodes/ingredient.gd" id="1_4ebo3"]
 [ext_resource type="Texture2D" uid="uid://crvss2ylscnml" path="res://Ingredient Textures/Fruits And Veggies 2.png" id="2_tcf62"]
 [ext_resource type="Script" path="res://sprite_2d.gd" id="3_xyl47"]
 
-[node name="Tomato" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bvr2"]
+size = Vector2(41, 43)
+
+[node name="Tomato" type="Area2D"]
 position = Vector2(0, 1)
 script = ExtResource("1_4ebo3")
 
@@ -24,6 +27,10 @@ offset_top = -6.0
 offset_right = 5.0
 offset_bottom = 6.0
 metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21.5, 23.5)
+shape = SubResource("RectangleShape2D_8bvr2")
 
 [connection signal="button_down" from="Sprite2D/Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Sprite2D/Button" to="." method="_on_button_button_up"]

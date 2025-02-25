@@ -1,10 +1,10 @@
 extends Node2D
 
+@export var move_amount: float = 30.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	createNewOrder()
-
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -21,3 +21,13 @@ func createNewOrder() -> void:
 	$paper/OrderName.show()
 	$paper/ingredientsList.text = str(ingredients[orderIndex])
 	$paper/ingredientsList.show()
+
+
+func _on_button_2_pressed() -> void:
+	var path_follow = get_parent()  # Get the PathFollow2D container (order is inside this)
+	
+	if path_follow and path_follow.get_parent():  # Ensure it has a parent (Path2D)
+		var path = path_follow.get_parent()  # Get the Path2D that manages orders
+		
+		if path.has_method("removeOrder"):  # Check if the main script has removeOrder()
+			path.removeOrder(path_follow)  # Pass the PathFollow2D to be removed

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://7w8rpbnkxst8"]
+
+[ext_resource type="Texture2D" uid="uid://bbyu8qsefpj8k" path="res://UI assets pack 2/UI cooking.png" id="1_pi4ag"]
+[ext_resource type="Script" path="res://board.gd" id="2_r0gkv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_413hh"]
+size = Vector2(90, 82)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("2_r0gkv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("1_pi4ag")
+offset = Vector2(1, -0.5)
+region_enabled = true
+region_rect = Rect2(82.107, 196.806, 45.2451, 40.936)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_413hh")
+
+[connection signal="area_entered" from="." to="CollisionShape2D" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="." to="CollisionShape2D" method="_on_area_2d_area_exited"]

@@ -72,6 +72,7 @@ func change_money() -> void:
 	$Label/value.text = str(money)
 
 func _on_timer_timeout() -> void:
+	$newOrderPlace.newOrder()
 	change_prices()
 
 

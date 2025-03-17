@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://b53l20jnejsnr" path="res://IngredientNodes/lettuce.tscn" id="5_mhq7q"]
 [ext_resource type="PackedScene" uid="uid://cp8jrlgnkvud5" path="res://IngredientNodes/cheese.tscn" id="6_na5c6"]
 [ext_resource type="PackedScene" uid="uid://bxhew6d1nn3g0" path="res://IngredientNodes/tomato.tscn" id="7_5mvqu"]
-[ext_resource type="PackedScene" path="res://IngredientNodes/cooked_patty.tscn" id="8_7117v"]
+[ext_resource type="PackedScene" uid="uid://cyhaofg5mrduh" path="res://IngredientNodes/cooked_patty.tscn" id="8_7117v"]
 [ext_resource type="FontFile" uid="uid://lcobln3eqemh" path="res://UI Assets pack_v.1_st/Sta.Toasty_font (1).ttf" id="10_u2eqo"]
 [ext_resource type="PackedScene" uid="uid://7w8rpbnkxst8" path="res://board.tscn" id="12_eff8j"]
-[ext_resource type="Script" path="res://board.gd" id="13_2cwd4"]
+[ext_resource type="PackedScene" uid="uid://c7lsl3o35tl8w" path="res://newOrderPlace.tscn" id="13_i7vbp"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_1vjox")
@@ -25,7 +25,7 @@ tomato = ExtResource("7_5mvqu")
 cookedpatty = ExtResource("8_7117v")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 30.0
 autostart = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -60,7 +60,6 @@ text = "value"
 
 [node name="Board" parent="." instance=ExtResource("12_eff8j")]
 position = Vector2(566, 252)
-script = ExtResource("13_2cwd4")
 
 [node name="SellButton" type="Button" parent="."]
 offset_left = 638.0
@@ -69,6 +68,9 @@ offset_right = 673.0
 offset_bottom = 288.0
 theme_override_fonts/font = ExtResource("10_u2eqo")
 text = "Sell"
+
+[node name="newOrderPlace" parent="." instance=ExtResource("13_i7vbp")]
+position = Vector2(429, 37)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="cookedLeft" from="Oven" to="." method="_on_oven_cooked_left"]
